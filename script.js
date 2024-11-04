@@ -56,20 +56,20 @@
 
 // async function searchAllObjects(searchQuery) {
 //     const queries = {
-//         documents: `http://localhost:3020/api/v24.2/query?q=SELECT document_number__v, name__v, type__v, subtype__v, version_id FROM documents FIND('${searchQuery}' SCOPE ALL)`,
-//         study: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, state__v, study_type__v, study_subtype__v FROM study__v FIND('${searchQuery}')`,
-//         study_country: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v FROM study_country__v FIND('${searchQuery}')`,
-//         site: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v, study_country__vr.name__v FROM site__v FIND('${searchQuery}')`,
-//         product: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, status__v, abbreviation__c FROM product__v FIND('${searchQuery}')`,
-//         study_personnel: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, team_role__v, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM study_person__clin FIND('${searchQuery}')`,
-//         organization: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, organization__v, study__vr.name__v, study_country__vr.name__v, site__v FROM study_organization__v FIND('${searchQuery}')`,
-//         study_product: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, product_role__vr.name__v, study__vr.name__v, product__vr.name__v FROM study_product__v FIND('${searchQuery}')`,
-//         visit_definition: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, sequence__v, study__vr.name__v FROM visit_def__v FIND('${searchQuery}')`,
-//         monitoring_events: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, state__v, study__ctmsr.name__v, study_country__ctmsr.name__v, site__ctmsr.name__v FROM monitoring_event__ctms FIND('${searchQuery}')`,
-//         milestone: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, status__v, complete__v, state__v, milestone_type__v, study__vr.name__v FROM milestone__v FIND('${searchQuery}')`,
-//         expected_document: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, edl__vr.name__v, type__v, subtype__v FROM edl_item__v FIND('${searchQuery}')`,
-//         subject: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, subject_status__clin, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM subject__clin FIND('${searchQuery}')`,
-//         subject_visit: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, visit_def__vr.name__v, visit_status__v, subject__vr.name__v, study__vr.name__v, study_country__vr.name__v, site__vr.name__v FROM visit__v FIND('${searchQuery}')`
+//         documents: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT document_number__v, name__v, type__v, subtype__v, version_id FROM documents FIND('${searchQuery}' SCOPE ALL)`,
+//         study: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, state__v, study_type__v, study_subtype__v FROM study__v FIND('${searchQuery}')`,
+//         study_country: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, study__vr.name__v FROM study_country__v FIND('${searchQuery}')`,
+//         site: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, study__vr.name__v, study_country__vr.name__v FROM site__v FIND('${searchQuery}')`,
+//         product: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, status__v, abbreviation__c FROM product__v FIND('${searchQuery}')`,
+//         study_personnel: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, team_role__v, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM study_person__clin FIND('${searchQuery}')`,
+//         organization: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, organization__v, study__vr.name__v, study_country__vr.name__v, site__v FROM study_organization__v FIND('${searchQuery}')`,
+//         study_product: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, product_role__vr.name__v, study__vr.name__v, product__vr.name__v FROM study_product__v FIND('${searchQuery}')`,
+//         visit_definition: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, sequence__v, study__vr.name__v FROM visit_def__v FIND('${searchQuery}')`,
+//         monitoring_events: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, object_type__vr.name__v, state__v, study__ctmsr.name__v, study_country__ctmsr.name__v, site__ctmsr.name__v FROM monitoring_event__ctms FIND('${searchQuery}')`,
+//         milestone: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, status__v, complete__v, state__v, milestone_type__v, study__vr.name__v FROM milestone__v FIND('${searchQuery}')`,
+//         expected_document: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, object_type__vr.name__v, edl__vr.name__v, type__v, subtype__v FROM edl_item__v FIND('${searchQuery}')`,
+//         subject: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, subject_status__clin, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM subject__clin FIND('${searchQuery}')`,
+//         subject_visit: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2query?q=SELECT id, name__v, visit_def__vr.name__v, visit_status__v, subject__vr.name__v, study__vr.name__v, study_country__vr.name__v, site__vr.name__v FROM visit__v FIND('${searchQuery}')`
 //     };
 
 //     const results = {};
@@ -341,7 +341,7 @@ function hideLoader() {
 
 async function authenticate(username, password) {
         console.log("Authenticating user...");
-        const response = await fetch('http://localhost:3020/auth', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
@@ -436,19 +436,19 @@ document.getElementById('logIn').addEventListener('click', async function() {
 
 async function searchAllObjects(searchQuery) {
     const queries = {
-        documents: `http://localhost:3020/api/v24.2/query?q=SELECT document_number__v, name__v, type__v, subtype__v, version_id FROM documents FIND('${searchQuery}' SCOPE ALL)`,
-        study: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, state__v, study_type__v, study_subtype__v FROM study__v FIND('${searchQuery}')`,
-        study_country: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v FROM study_country__v FIND('${searchQuery}')`,
-        site: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v, study_country__vr.name__v FROM site__v FIND('${searchQuery}')`,
-        study_personnel: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, team_role__v, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM study_person__clin FIND('${searchQuery}')`,
-        organization: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, organization__v, study__vr.name__v, study_country__vr.name__v, site__v FROM study_organization__v FIND('${searchQuery}')`,
-        study_product: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, product_role__vr.name__v, study__vr.name__v, product__vr.name__v FROM study_product__v FIND('${searchQuery}')`,
-        visit_definition: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, sequence__v, study__vr.name__v FROM visit_def__v FIND('${searchQuery}')`,
-        monitoring_events: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, state__v, study__ctmsr.name__v, study_country__ctmsr.name__v, site__ctmsr.name__v FROM monitoring_event__ctms FIND('${searchQuery}')`,
-        milestone: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, status__v, complete__v, state__v, milestone_type__v, study__vr.name__v FROM milestone__v FIND('${searchQuery}')`,
-        expected_document: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, edl__vr.name__v, type__v, subtype__v FROM edl_item__v FIND('${searchQuery}')`,
-        subject: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, subject_status__clin, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM subject__clin FIND('${searchQuery}')`,
-        subject_visit: `http://localhost:3020/api/v24.2/query?q=SELECT id, name__v, visit_def__vr.name__v, visit_status__v, subject__vr.name__v, study__vr.name__v, study_country__vr.name__v, site__vr.name__v FROM visit__v FIND('${searchQuery}')`
+        documents: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT document_number__v, name__v, type__v, subtype__v, version_id FROM documents FIND('${searchQuery}' SCOPE ALL)`,
+        study: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, state__v, study_type__v, study_subtype__v FROM study__v FIND('${searchQuery}')`,
+        study_country: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v FROM study_country__v FIND('${searchQuery}')`,
+        site: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, study__vr.name__v, study_country__vr.name__v FROM site__v FIND('${searchQuery}')`,
+        study_personnel: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, team_role__v, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM study_person__clin FIND('${searchQuery}')`,
+        organization: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, organization__v, study__vr.name__v, study_country__vr.name__v, site__v FROM study_organization__v FIND('${searchQuery}')`,
+        study_product: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, product_role__vr.name__v, study__vr.name__v, product__vr.name__v FROM study_product__v FIND('${searchQuery}')`,
+        visit_definition: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, sequence__v, study__vr.name__v FROM visit_def__v FIND('${searchQuery}')`,
+        monitoring_events: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, state__v, study__ctmsr.name__v, study_country__ctmsr.name__v, site__ctmsr.name__v FROM monitoring_event__ctms FIND('${searchQuery}')`,
+        milestone: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, status__v, complete__v, state__v, milestone_type__v, study__vr.name__v FROM milestone__v FIND('${searchQuery}')`,
+        expected_document: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, object_type__vr.name__v, edl__vr.name__v, type__v, subtype__v FROM edl_item__v FIND('${searchQuery}')`,
+        subject: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, subject_status__clin, study__clinr.name__v, study_country__clinr.name__v, site__clinr.name__v FROM subject__clin FIND('${searchQuery}')`,
+        subject_visit: `https://cors-anywhere.herokuapp.com/https://partnersi-prana4life-clinical.veevavault.com/api/v24.2/query?q=SELECT id, name__v, visit_def__vr.name__v, visit_status__v, subject__vr.name__v, study__vr.name__v, study_country__vr.name__v, site__vr.name__v FROM visit__v FIND('${searchQuery}')`
     };
 
     const results = {};
